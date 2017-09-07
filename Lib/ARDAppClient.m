@@ -27,25 +27,25 @@
 
 #import "ARDAppClient.h"
 
-#import <AVFoundation/AVFoundation.h>
-
-#import "ARDMessageResponse.h"
-#import "ARDRegisterResponse.h"
-#import "ARDSignalingMessage.h"
-#import "ARDUtilities.h"
-#import "ARDWebSocketChannel.h"
-#import "RTCICECandidate+JSON.h"
-#import "RTCICEServer+JSON.h"
-#import "RTCMediaConstraints.h"
-#import "RTCMediaStream.h"
-#import "RTCPair.h"
-#import "RTCPeerConnection.h"
-#import "RTCPeerConnectionDelegate.h"
-#import "RTCPeerConnectionFactory.h"
-#import "RTCSessionDescription+JSON.h"
-#import "RTCSessionDescriptionDelegate.h"
-#import "RTCVideoCapturer.h"
-#import "RTCVideoTrack.h"
+//#import <AVFoundation/AVFoundation.h>
+//
+//#import "ARDMessageResponse.h"
+//#import "ARDRegisterResponse.h"
+//#import "ARDSignalingMessage.h"
+//#import "ARDUtilities.h"
+//#import "ARDWebSocketChannel.h"
+//#import "RTCICECandidate+JSON.h"
+//#import "RTCICEServer+JSON.h"
+//#import "RTCMediaConstraints.h"
+//#import "RTCMediaStream.h"
+//#import "RTCPair.h"
+//#import "RTCPeerConnection.h"
+//#import "RTCPeerConnectionDelegate.h"
+//#import "RTCPeerConnectionFactory.h"
+//#import "RTCSessionDescription+JSON.h"
+//#import "RTCSessionDescriptionDelegate.h"
+//#import "RTCVideoCapturer.h"
+//#import "RTCVideoTrack.h"
 
 // TODO(tkchin): move these to a configuration object.
 static NSString *kARDRoomServerHostUrl =
@@ -75,24 +75,24 @@ static NSInteger kARDAppClientErrorInvalidRoom = -7;
 
 @interface ARDAppClient () <ARDWebSocketChannelDelegate,
     RTCPeerConnectionDelegate, RTCSessionDescriptionDelegate>
-@property(nonatomic, strong) ARDWebSocketChannel *channel;
-@property(nonatomic, strong) RTCPeerConnection *peerConnection;
-@property(nonatomic, strong) RTCPeerConnectionFactory *factory;
-@property(nonatomic, strong) NSMutableArray *messageQueue;
-
-@property(nonatomic, assign) BOOL isTurnComplete;
-@property(nonatomic, assign) BOOL hasReceivedSdp;
-@property(nonatomic, readonly) BOOL isRegisteredWithRoomServer;
-
-@property(nonatomic, strong) NSString *roomId;
-@property(nonatomic, strong) NSString *clientId;
-@property(nonatomic, assign) BOOL isInitiator;
-@property(nonatomic, assign) BOOL isSpeakerEnabled;
-@property(nonatomic, strong) NSMutableArray *iceServers;
-@property(nonatomic, strong) NSURL *webSocketURL;
-@property(nonatomic, strong) NSURL *webSocketRestURL;
-@property(nonatomic, strong) RTCAudioTrack *defaultAudioTrack;
-@property(nonatomic, strong) RTCVideoTrack *defaultVideoTrack;
+//@property(nonatomic, strong) ARDWebSocketChannel *channel;
+//@property(nonatomic, strong) RTCPeerConnection *peerConnection;
+//@property(nonatomic, strong) RTCPeerConnectionFactory *factory;
+//@property(nonatomic, strong) NSMutableArray *messageQueue;
+//
+//@property(nonatomic, assign) BOOL isTurnComplete;
+//@property(nonatomic, assign) BOOL hasReceivedSdp;
+//@property(nonatomic, readonly) BOOL isRegisteredWithRoomServer;
+//
+//@property(nonatomic, strong) NSString *roomId;
+//@property(nonatomic, strong) NSString *clientId;
+//@property(nonatomic, assign) BOOL isInitiator;
+//@property(nonatomic, assign) BOOL isSpeakerEnabled;
+//@property(nonatomic, strong) NSMutableArray *iceServers;
+//@property(nonatomic, strong) NSURL *webSocketURL;
+//@property(nonatomic, strong) NSURL *webSocketRestURL;
+//@property(nonatomic, strong) RTCAudioTrack *defaultAudioTrack;
+//@property(nonatomic, strong) RTCVideoTrack *defaultVideoTrack;
 
 @end
 
@@ -105,7 +105,7 @@ static NSInteger kARDAppClientErrorInvalidRoom = -7;
 @synthesize peerConnection = _peerConnection;
 @synthesize factory = _factory;
 @synthesize messageQueue = _messageQueue;
-@synthesize isTurnComplete = _isTurnComplete;
+//@synthesize isTurnComplete = _isTurnComplete;
 @synthesize hasReceivedSdp  = _hasReceivedSdp;
 @synthesize roomId = _roomId;
 @synthesize clientId = _clientId;
