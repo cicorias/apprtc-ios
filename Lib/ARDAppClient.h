@@ -48,6 +48,10 @@
 #import "RTCSessionDescriptionDelegate.h"
 #import "RTCVideoCapturer.h"
 #import "RTCVideoTrack.h"
+/*not in implementation file */
+#import "RTCDataChannel.h"
+#import "RTCMediaConstraints.h"
+/*in implementation file */
 /*End exposing imports*/
 
 typedef NS_ENUM(NSInteger, ARDAppClientState) {

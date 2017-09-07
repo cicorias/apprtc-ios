@@ -15,11 +15,19 @@ class MyARDAppClient: ARDAppClient, RTCDataChannelDelegate  {
     
     func channelDidChangeState(_ channel: RTCDataChannel!) {
         print("CHANNEL STATE CHANGED")
+//        printf("CHANNELDIDCHANGESTATE")
+        
+        let string = "I PROMISE THIS WILL WORK"
+        let data = string.data(using: .utf8)
+        let buffer = RTCDataBuffer(data: data, isBinary: false)
+        self.dataChannel.sendData(buffer)
     }
     
     func channel(_ channel: RTCDataChannel!, didReceiveMessageWith buffer: RTCDataBuffer!) {
-        print("HELLO")
-        return
+        print("MESSAGE WAS RECEIVED")
+        let datastring = NSString(data: buffer.data, encoding: String.Encoding.utf8.rawValue)
+        let st = datastring! as String
+        print(st)
     }
     
     override func startSignalingIfReady() {
