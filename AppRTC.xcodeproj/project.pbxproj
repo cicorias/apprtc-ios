@@ -16,6 +16,7 @@
 		5C80AAA61AAB71C700F21FFA /* ARTCVideoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AAA51AAB71C700F21FFA /* ARTCVideoChatViewController.m */; };
 		5C80AAAA1AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */; };
 		65B60C96FF584964C27562A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDADA2C0C3A5199BC24EF352 /* libPods.a */; };
+		87652C571F61910D0027BD9A /* MyARDAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87652C561F61910D0027BD9A /* MyARDAppClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		5C80AAA51AAB71C700F21FFA /* ARTCVideoChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCVideoChatViewController.m; sourceTree = "<group>"; };
 		5C80AAA81AAB788A00F21FFA /* ARTCRoomTextInputViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCRoomTextInputViewCell.h; sourceTree = "<group>"; };
 		5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCRoomTextInputViewCell.m; sourceTree = "<group>"; };
+		87652C551F61910D0027BD9A /* AppRTC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppRTC-Bridging-Header.h"; sourceTree = "<group>"; };
+		87652C561F61910D0027BD9A /* MyARDAppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyARDAppClient.swift; sourceTree = "<group>"; };
 		A91A157833594B50E74E767F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B6DABCBD6F43FEC6530D36B2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EDADA2C0C3A5199BC24EF352 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +91,7 @@
 		5C80AA781AAB5DF300F21FFA /* AppRTC */ = {
 			isa = PBXGroup;
 			children = (
+				87652C581F6192490027BD9A /* CatalystLib */,
 				5C80AAA21AAB718200F21FFA /* App */,
 				5C80AAA31AAB718700F21FFA /* ViewControllers */,
 				5C80AAA71AAB786200F21FFA /* Views */,
@@ -137,6 +141,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		87652C581F6192490027BD9A /* CatalystLib */ = {
+			isa = PBXGroup;
+			children = (
+				87652C561F61910D0027BD9A /* MyARDAppClient.swift */,
+				87652C551F61910D0027BD9A /* AppRTC-Bridging-Header.h */,
+			);
+			name = CatalystLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +184,8 @@
 				TargetAttributes = {
 					5C80AA751AAB5DF300F21FFA = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = UBF8T346G9;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -260,6 +275,7 @@
 			files = (
 				5C80AAAA1AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m in Sources */,
 				5C80AAA61AAB71C700F21FFA /* ARTCVideoChatViewController.m in Sources */,
+				87652C571F61910D0027BD9A /* MyARDAppClient.swift in Sources */,
 				5C80AAA11AAB717100F21FFA /* ARTCRoomViewController.m in Sources */,
 				5C80AA7F1AAB5DF300F21FFA /* AppDelegate.m in Sources */,
 				5C80AA7C1AAB5DF300F21FFA /* main.m in Sources */,
@@ -373,6 +389,8 @@
 			baseConfigurationReference = A91A157833594B50E74E767F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = UBF8T346G9;
 				INFOPLIST_FILE = AppRTC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -380,6 +398,9 @@
 					"$(PROJECT_DIR)/Lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppRTC/AppRTC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -388,6 +409,8 @@
 			baseConfigurationReference = B6DABCBD6F43FEC6530D36B2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = UBF8T346G9;
 				INFOPLIST_FILE = AppRTC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -395,6 +418,8 @@
 					"$(PROJECT_DIR)/Lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppRTC/AppRTC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

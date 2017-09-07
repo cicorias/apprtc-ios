@@ -8,6 +8,7 @@
 
 #import "ARTCVideoChatViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AppRTC-Swift.h"
 
 #define SERVER_HOST_URL @"https://appr.tc"
 
@@ -61,7 +62,7 @@
     
     //Connect to the room
     [self disconnect];
-    self.client = [[ARDAppClient alloc] initWithDelegate:self];
+    self.client = [[MyARDAppClient alloc] initWithDelegate:self];
     [self.client setServerHostUrl:SERVER_HOST_URL];
     [self.client connectToRoomWithId:self.roomName options:nil];
     
