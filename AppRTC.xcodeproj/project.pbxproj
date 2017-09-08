@@ -17,6 +17,7 @@
 		5C80AAAA1AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */; };
 		65B60C96FF584964C27562A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDADA2C0C3A5199BC24EF352 /* libPods.a */; };
 		87652C571F61910D0027BD9A /* MyARDAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87652C561F61910D0027BD9A /* MyARDAppClient.swift */; };
+		9DDF12D01F62DB4900DFAE8F /* Negotiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDF12CF1F62DB4900DFAE8F /* Negotiate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCRoomTextInputViewCell.m; sourceTree = "<group>"; };
 		87652C551F61910D0027BD9A /* AppRTC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppRTC-Bridging-Header.h"; sourceTree = "<group>"; };
 		87652C561F61910D0027BD9A /* MyARDAppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyARDAppClient.swift; sourceTree = "<group>"; };
+		9DDF12CF1F62DB4900DFAE8F /* Negotiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Negotiate.swift; sourceTree = "<group>"; };
 		A91A157833594B50E74E767F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B6DABCBD6F43FEC6530D36B2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EDADA2C0C3A5199BC24EF352 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 			children = (
 				87652C561F61910D0027BD9A /* MyARDAppClient.swift */,
 				87652C551F61910D0027BD9A /* AppRTC-Bridging-Header.h */,
+				9DDF12CF1F62DB4900DFAE8F /* Negotiate.swift */,
 			);
 			name = CatalystLib;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				5C80AAAA1AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m in Sources */,
 				5C80AAA61AAB71C700F21FFA /* ARTCVideoChatViewController.m in Sources */,
 				87652C571F61910D0027BD9A /* MyARDAppClient.swift in Sources */,
+				9DDF12D01F62DB4900DFAE8F /* Negotiate.swift in Sources */,
 				5C80AAA11AAB717100F21FFA /* ARTCRoomViewController.m in Sources */,
 				5C80AA7F1AAB5DF300F21FFA /* AppDelegate.m in Sources */,
 				5C80AA7C1AAB5DF300F21FFA /* main.m in Sources */,
